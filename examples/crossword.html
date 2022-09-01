@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Crosswords used in an English class in France</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/cw.css">
+  <script src="../lib/cw.js"></script>
+</head>
+<body>
+  <div id="cwd"></div>
+  <script>
+    var words = [
+      { word: "AGREE"     , def: "You're right ! I ⋯ with you." },
+      { word: "ALWAYS"    , def: "The opposite of “never”." },
+      { word: "ARTISTIC"  , def: "He likes painting and drawing." },
+      { word: "AS"        , def: "Roy is ⋯ strong as Martin." },
+      { word: "BEAR"      , def: "I'm a huge mammal. I'm white and I live in Alaska." },
+      { word: "BOTH"      , def: "Mike is tall and John is tall too. They are ⋯ tall." },
+      { word: "BRILLIANT" , def: "Synonym of “top of the class”." },
+      { word: "CARDIFF"   , def: "The capital of Wales." },
+      { word: "CHILLY"    , def: "In summer it's hot, but in winter it can be ⋯" },
+      { word: "DEVASTATED", def: "Extremely miserable." },
+      { word: "DISRUPTIVE", def: "A synonym of troublemaker." },
+      { word: "DOES"      , def: "⋯ John often set the table?" },
+      { word: "DRAGONS"   , def: "They look like prehistoric monsters and they're man-eaters." },
+      { word: "DRUMSTICKS", def: "Things to play the drums." },
+      { word: "DUMP"      , def: "Let down." },
+      { word: "ENGLAND"   , def: "The country where Elizabeth II lives." },
+      { word: "EVENTUALLY", def: "A false friend and a synonym of in the end." },
+      { word: "EXHAUSTED" , def: "Dead tired." },
+      { word: "FOR"       , def: "The lady is looking ⋯ a cinema." },
+      { word: "GET"       , def: "My friends seldom ⋯ into trouble." },
+      { word: "GRADUATE"  , def: "Complete a university degree." },
+      { word: "GRUMPY"    , def: "The opposite of “cheerful”." },
+      { word: "HESITATING", def: "“Err, well, let me think” Paul is ⋯" },
+      { word: "HOOT"      , def: "The sound an owl makes." },
+      { word: "HORSE"     , def: "I'm herbivorous, I've got a mane and four hooves." },
+      { word: "JAIL"      , def: "You are sent to this place when you are a criminal." },
+      { word: "JOYFUL"    , def: "“Joyeux” in English." },
+      { word: "KANGAROO"  , def: "I live in Australia. I've got a pouch and I can jump very high." },
+      { word: "LAMP"      , def: "I switch it on when it's dark." },
+      { word: "LAPTOP"    , def: "A computer you can take with you everywhere." },
+      { word: "MORE"      , def: "John is ⋯ interested in music than Roy." },
+      { word: "NUMBER"    , def: "Her phone ⋯ is 765 689 356." },
+      { word: "NUTS"      , def: "A synonym of crazy." },
+      { word: "PINK"      , def: "A mix of red and white." },
+      { word: "PITCH DARK", def: "Total darkness." },
+      { word: "PLUMP"     , def: "A synonym of big." },
+      { word: "RUDE"      , def: "The opposite of polite." },
+      { word: "SHELVES"   , def: "In a tidy bedroom,  where are the books on?" },
+      { word: "SMALLER"   , def: "Mike is ⋯ than Oliver, so Oliver is taller than Mike." },
+      { word: "SOB"       , def: "A synonym of cry a lot." },
+      { word: "SPORTY"    , def: "He likes skiing, playing rugby and climbing." },
+      { word: "STIRRER"   , def: "You use it to mix concentrated fruit syrup and water in a glass." },
+      { word: "STUNNED"   , def: "A synonym of amazed." },
+      { word: "TEACHER"   , def: "Mrs Lepigre is our English ⋯" },
+      { word: "TIDY"      , def: "The opposite of “messy”." },
+      { word: "TIGER"     , def: "I live in Asia. I'm very dangerous. I've got black stripes." },
+      { word: "TOP"       , def: "This girl is clever. She's ⋯ of the class." },
+      { word: "UNDERSTAND", def: "I don't ⋯ Can you explain again?" },
+      { word: "WEAK"      , def: "The opposite of “strong”." },
+      { word: "WHERE"     , def: "“Où” in English." },
+      { word: "WHEREAS"   , def: "A synonym of “but”." },
+      { word: "WHOSE"     , def: "⋯ trainers are these?" },
+      { word: "YEAR"      , def: "Twelve months." },
+    ];
+
+    var cwd = new Crossword(26, 24, words, document.getElementById("cwd"));
+  </script>
+</body>
+</html>
