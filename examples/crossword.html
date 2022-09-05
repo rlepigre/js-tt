@@ -8,7 +8,12 @@
   <script src="../lib/cw.js"></script>
 </head>
 <body>
-  <div id="cwd"></div>
+  <table>
+    <tr>
+      <td id="grid"></td>
+      <td id="defs"></td>
+    </tr>
+  </table>
   <script>
     var words = [
       { word: "AGREE"     , def: "You're right ! I ⋯ with you." },
@@ -66,7 +71,9 @@
       { word: "YEAR"      , def: "Twelve months." },
     ];
 
-    var cwd = new Crossword(26, 24, words, document.getElementById("cwd"));
+    var elem_grid = document.getElementById("grid");
+    var elem_defs = document.getElementById("defs");
+    var cwd = new Crossword(30, 22, words, grid, defs, defs);
   </script>
 </body>
 </html>

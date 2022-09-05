@@ -1,0 +1,75 @@
+div.cw_grid_container {
+  padding: 20px;
+  background-color: lightgrey;
+  display: inline-block;
+}
+
+table.cw_grid {
+  margin: auto;
+  border-collapse: collapse;
+  font-family: "Arial", "Helvetica";
+}
+
+table.cw_grid tr, table.cw_grid tr td {
+  padding: 0;
+  margin: 0;
+}
+
+table.cw_grid tr td:not(:empty) {
+  border: 1px solid darkgrey;
+}
+
+table.cw_grid tr td:empty {
+  visibility: hidden;
+}
+
+div.cw_cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+div.cw_letter, div.cw_fixed {
+  background-color: white;
+}
+
+div.cw_space {
+  background-color: darkgrey;
+}
+
+span.cw_contents {
+  font-size: 1.4em;
+  line-height: 40px;
+}
+
+div.cw_number {
+  padding: 0;
+  padding-left: 1px;
+  padding-top: 1px;
+  margin: 0;
+  font-size: 0.7em;
+  position: absolute;
+}
+
+p.cw_defs {
+  text-align: justify;
+  padding: 10px;
+}
+
+p.cw_defs span.cw_defs_title {
+  font-weight: bold;
+  text-decoration: underline;
+  padding-right: 1em;
+  font-size: 1.5em;
+}
+
+p.cw_defs span.cw_def {
+  padding-right: 0.5em;
+}
+
+p.cw_defs span.cw_def span.cw_def_num {
+  padding-right: 0.5em;
+  font-weight: bold;
+}
