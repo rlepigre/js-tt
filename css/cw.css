@@ -1,5 +1,5 @@
 div.cw_grid_container {
-  padding: 20px;
+  padding: 10px;
   background-color: lightgrey;
   display: inline-block;
 }
@@ -72,4 +72,12 @@ p.cw_defs span.cw_def {
 p.cw_defs span.cw_def span.cw_def_num {
   padding-right: 0.5em;
   font-weight: bold;
+}
+
+p.debug {
+  color: 1px solid red;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
 }
