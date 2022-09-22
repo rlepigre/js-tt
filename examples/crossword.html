@@ -8,13 +8,16 @@
   <script src="../lib/cw.js"></script>
 </head>
 <body>
-  <table>
+  <table id="crossword">
     <tr>
       <td id="grid"></td>
       <td id="defs"></td>
     </tr>
   </table>
+  <div id="form">
+  </div>
   <script>
+    /*
     var words = [
       { word: "AGREE"     , def: "You're right ! I ⋯ with you." },
       { word: "ALWAYS"    , def: "The opposite of “never”." },
@@ -70,10 +73,37 @@
       { word: "WHOSE"     , def: "⋯ trainers are these?" },
       { word: "YEAR"      , def: "Twelve months." },
     ];
+   */
 
+    var elem_crossword = document.getElementById("crossword");
     var elem_grid = document.getElementById("grid");
     var elem_defs = document.getElementById("defs");
-    var cwd = new Crossword(30, 22, words, grid, defs, defs);
+    var elem_form = document.getElementById("form");
+
+    var ps = new URLSearchParams(window.location.search);
+    var data = ps.get("data");
+    var spec = ps.get("spec");
+
+    var form = null;
+    var cwd = null;
+
+    if(spec === null && data === null) {
+      elem_crossword.visibility = "hidden";
+      form = new CrosswordDataForm(elem_form);
+    } else if (spec !== null && data === null) {
+      elem_form.visibility = "hidden";
+      var spec = JSON_atob(decodeURIComponent(spec));
+      var w = spec.width;
+      var h = spec.height;
+      var words = spec.words;
+      cwd = new Crossword(w, h, words, elem_grid, elem_defs, elem_defs);
+    } else if (spec === null && data !== null) {
+      elem_form.visibility = "hidden";
+      var data = JSON_atob(decodeURIComponent(data));
+      cwd = new CrosswordSolver(data, elem_grid, elem_defs, elem_defs);
+    } else {
+      console.log("Should not be reachable...");
+    }
   </script>
 </body>
 </html>
