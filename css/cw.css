@@ -96,6 +96,12 @@ button.validate_button {
   margin-top: 10px;
 }
 
+@media print {
+  button.validate_button {
+    visibility: hidden;
+  }
+}
+
 div.validated {
   background-color: #BBFFBB;
 }
